@@ -14,7 +14,19 @@ const Navbar = () => {
           <li className="NavItem">
             <LinkScroll to ="about" className="NavLinks">About</LinkScroll>
           </li>
+          <li className="NavItem">
+            <LinkScroll to ="discover" className="NavLinks">Discover</LinkScroll>
+          </li>
+          <li className="NavItem">
+            <LinkScroll to ="services" className="NavLinks">Services</LinkScroll>
+          </li>
+          <li className="NavItem">
+            <LinkScroll to ="signup" className="NavLinks">Sign Up</LinkScroll>
+          </li>    
         </ul>
+        <div className="NavBtn">
+          <Link to="/signin" className="NavBtnLink">Sign In</Link>
+        </div>
       </div>
     </nav>    
   )

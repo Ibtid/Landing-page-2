@@ -4,12 +4,12 @@ import {FaBars} from "react-icons/fa"
 import { Link} from "react-router-dom"
 import {Link as LinkScroll} from "react-scroll"
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
     <nav className="Nav">
       <div className="NavbarContainer">
         <Link to="/" className="NavLogo">dolla</Link>
-          <div className = "MobileIcon"><FaBars/></div>
+          <div className = "MobileIcon" onClick={props.toggle}><FaBars/></div>
         <ul className="NavMenu">
           <li className="NavItem">
             <LinkScroll to ="about" className="NavLinks">About</LinkScroll>

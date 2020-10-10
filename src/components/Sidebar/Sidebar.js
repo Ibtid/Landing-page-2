@@ -4,11 +4,14 @@ import {Link as LinkS} from "react-scroll"
 import {Link} from "react-router-dom"
 import "./Sidebar.css"
 
-const Sidebar = () => {
+const Sidebar = (props) => {
+
+    const isOpenMessage = props.isOpen?"SidebarContainer isOpen":"SidebarContainer";
+
     return (
-        <aside className="SidebarContainer isOpen">
+        <aside className={isOpenMessage}>
             <div className="Icon">
-               <FaTimes className="CloseIcon"/> 
+               <FaTimes className="CloseIcon" onClick={props.toggle}/> 
             </div>  
             <div className="SidebarWrapper">
                 <div className="SidebarMenu">

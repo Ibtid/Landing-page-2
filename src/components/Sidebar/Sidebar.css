@@ -36,6 +36,14 @@
   color: #fff;
 }
 
+.SidebarMenu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 80px);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .SidebarLink {
   display: flex;
   align-items: center;
@@ -51,4 +59,34 @@
 .SidebarLink:hover {
   color: #01bf71;
   transition: 0.2s ease-in-out;
+}
+
+.SideBtnWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.SidebarRoute {
+  border-radius: 50px;
+  background: #01bf71;
+  white-space: nowrap;
+  padding: 16px 65px;
+  color: #010606;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+.SidebarRoute:hover {
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+  color: #010606;
+}
+
+@media screen and (max-width: 480px) {
+  .SidebarMenu {
+    grid-template-rows: repeat(4, 60px);
+  }
 }

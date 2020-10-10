@@ -24,9 +24,9 @@ const Sidebar = () => {
                     <LinkS to="signup" className="SidebarLink">
                         Sign Up
                     </LinkS>
-                    <div className="SideBtnWrap">
+                </div>
+                <div className="SideBtnWrap">
                         <Link to="/signip" className="SidebarRoute">Sign In</Link>
-                    </div>
                 </div>
             </div>          
         </aside>

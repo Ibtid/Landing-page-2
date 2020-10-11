@@ -9,22 +9,22 @@ const Sidebar = (props) => {
     const isOpenMessage = props.isOpen?"SidebarContainer isOpen":"SidebarContainer";
 
     return (
-        <aside className={isOpenMessage}>
+        <aside className={isOpenMessage} onClick={props.toggle}>
             <div className="Icon">
-               <FaTimes className="CloseIcon" onClick={props.toggle}/> 
+               <FaTimes className="CloseIcon"/> 
             </div>  
             <div className="SidebarWrapper">
                 <div className="SidebarMenu">
-                    <LinkS to="about" className="SidebarLink">
+                    <LinkS to="about" className="SidebarLink" onClick={props.toggle}>
                         About
                     </LinkS>
-                    <LinkS to="discover" className="SidebarLink">
+                    <LinkS to="discover" className="SidebarLink" onClick={props.toggle}>
                         Discover
                     </LinkS>
-                    <LinkS to="services" className="SidebarLink">
+                    <LinkS to="services" className="SidebarLink" onClick={props.toggle}>
                         Services
                     </LinkS>
-                    <LinkS to="signup" className="SidebarLink">
+                    <LinkS to="signup" className="SidebarLink" onClick={props.toggle}>
                         Sign Up
                     </LinkS>
                 </div>

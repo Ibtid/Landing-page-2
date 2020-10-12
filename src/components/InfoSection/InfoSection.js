@@ -14,7 +14,15 @@ const InfoSection = (props) => {
                             <h1 className={`Heading ${props.lightText?"lightText":""}`}>{props.headline}</h1>
                             <p className={`Subtitle ${props.darkText?"darkText":""}`}>{props.description}</p>
                             <div className="BtnWrap">
-                                <LinkS className={`Button ${props.lightBg?"":"primary"}`} to="home">
+                                <LinkS
+                                className={`Button ${props.lightBg?"":"primary"}`}
+                                to="home"
+                                smooth={true}
+                                duration={500}
+                                spy={true}
+                                exact="true"
+                                offset={-80}
+                                >
                                     {props.buttonLabel}
                                 </LinkS>
                             </div>

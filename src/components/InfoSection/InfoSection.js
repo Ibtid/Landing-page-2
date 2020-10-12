@@ -3,27 +3,26 @@ import {Link as LinkS} from "react-scroll"
 import "../Button.css"
 import "./InfoSection.css"
 
-const InfoSection = () => {
-    const id ="home"
+const InfoSection = (props) => {
     return (
-        <div className="InfoContainer" id={id}>
+        <div className={`InfoContainer ${props.lightBg?"lightBg":""}`} id={props.id}>
             <div className="InfoWrapper">
-                <div className="InfoRow">
+                <div className={`InfoRow ${props.imgStart?"imgStart":""}`}>
                     <div className="Column1">
                         <div className="TextWrapper">
-                            <p className="TopLine">Topline</p>
-                            <h1 className="Heading">Heading</h1>
-                            <p className="Subtitle">Subtitle</p>
+                            <p className="TopLine">{props.topline}</p>
+                            <h1 className={`Heading ${props.lightText?"lightText":""}`}>{props.headline}</h1>
+                            <p className={`Subtitle ${props.darkText?"darkText":""}`}>{props.description}</p>
                             <div className="BtnWrap">
-                                <LinkS className="Button" to="home">
-                                    Button
+                                <LinkS className={`Button ${props.lightBg?"":"primary"}`} to="home">
+                                    {props.buttonLabel}
                                 </LinkS>
                             </div>
                         </div>
                     </div>
                     <div className="Column2">
                         <div className="ImgWrap">
-                            <img className="Img"/>
+                            <img className="Img" src={props.img} alt={props.alt}/>
                         </div>
                     </div>
                 </div>

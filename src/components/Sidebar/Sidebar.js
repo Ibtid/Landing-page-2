@@ -29,7 +29,7 @@ const Sidebar = (props) => {
                     </LinkS>
                 </div>
                 <div className="SideBtnWrap">
-                        <Link to="/signip" className="SidebarRoute">Sign In</Link>
+                        <Link to="/signin" className="SidebarRoute">Sign In</Link>
                 </div>
             </div>          
         </aside>

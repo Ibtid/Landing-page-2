@@ -1,5 +1,5 @@
 import React from 'react'
-
+import{FaFacebook,FaInstagram,FaYoutube,FaTwitter,FaLinkedin} from "react-icons/fa"
 import {Link} from "react-router-dom"
 
 import "./Footer.css"
@@ -43,7 +43,31 @@ const Footer = () => {
                        </div>
                     </div>
                 </div>
-                
+                <section className="SocialMedia">
+                    <div className="SocialMediaWrap">
+                        <Link className="SocialLogo" to="/">dolla</Link>
+                        <small className="WebsiteRights">
+                            dolla © {new Date().getFullYear()}. All rights reserved.
+                        </small>
+                        <div className="SocialIcons">
+                            <a className="SocialIconLink" href="/" target="_blank" aria-label="Facebook">
+                                <FaFacebook/>
+                            </a>
+                            <a className="SocialIconLink" href="/" target="_blank" aria-label="Instagram">
+                                <FaInstagram/>
+                            </a>
+                            <a className="SocialIconLink" href="/" target="_blank" aria-label="Youtube">
+                                <FaYoutube/>
+                            </a>
+                            <a className="SocialIconLink" href="/" target="_blank" aria-label="Twitter">
+                                <FaTwitter/>
+                            </a>
+                            <a className="SocialIconLink" href="/" target="_blank" aria-label="Linkedin">
+                                <FaLinkedin/>
+                            </a>
+                        </div>
+                    </div>
+                </section>
             </div>            
         </footer>
     )

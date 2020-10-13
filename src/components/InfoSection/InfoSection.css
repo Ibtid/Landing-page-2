@@ -109,13 +109,25 @@
     grid-template-areas: "col1 col1" "col2 col2";
   }
 
+  .TextWrapper {
+    padding-bottom: 20px;
+  }
+
+  .Heading {
+    font-size: 40px;
+  }
+
+  .Subtitle {
+    font-size: 18px;
+  }
+
   .imgStart {
     grid-template-areas: "col1" "col2";
   }
 
   .ImgWrap {
-    height: 150px;
-    padding-bottom: 30px;
+    height: 220px;
+    padding-bottom: 40px;
   }
 }
 

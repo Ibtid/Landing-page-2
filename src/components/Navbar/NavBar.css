@@ -1,5 +1,5 @@
 .Nav {
-  background: #000;
+  background: transparent;
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -9,6 +9,10 @@
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.scrollNav {
+  background: #000;
 }
 
 .NavbarContainer {
@@ -59,8 +63,8 @@
   cursor: pointer;
 }
 
-.NavLinks:active {
-  border-bottom: 3px dolid #01bf71;
+.active {
+  border-bottom: 5px solid #01bf71;
 }
 
 .NavBtn {

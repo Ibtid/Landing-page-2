@@ -1,10 +1,14 @@
 import React from 'react'
 import{FaFacebook,FaInstagram,FaYoutube,FaTwitter,FaLinkedin} from "react-icons/fa"
 import {Link} from "react-router-dom"
+import {animateScroll as scroll} from 'react-scroll'
 
 import "./Footer.css"
 
 const Footer = () => {
+    const toggleHome=()=>{
+        scroll.scrollToTop();
+      }
     return (
         <footer className="FooterContainer">
             <div className="FooterWrap">
@@ -45,7 +49,7 @@ const Footer = () => {
                 </div>
                 <section className="SocialMedia">
                     <div className="SocialMediaWrap">
-                        <Link className="SocialLogo" to="/">dolla</Link>
+                        <Link className="SocialLogo" to="/" onClick={toggleHome}>dolla</Link>
                         <small className="WebsiteRights">
                             dolla © {new Date().getFullYear()}. All rights reserved.
                         </small>

@@ -1,27 +1,79 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import "./NavBar.css"
 import {FaBars} from "react-icons/fa"
 import { Link} from "react-router-dom"
 import {Link as LinkScroll} from "react-scroll"
+import {animateScroll as scroll} from 'react-scroll'
 
 const Navbar = (props) => {
-    return (
-    <nav className="Nav">
+
+  const[scrollNav,setScrollNav]=useState(false);
+
+  const changeNav=()=>{
+    if(window.scrollY>=80){
+      setScrollNav(true);
+    }else{
+      setScrollNav(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll',changeNav)
+  }, [])
+
+  const toggleHome=()=>{
+    scroll.scrollToTop();
+  }
+
+  return (
+    <nav className={`Nav ${scrollNav?"scrollNav":""}`}>
       <div className="NavbarContainer">
-        <Link to="/" className="NavLogo">dolla</Link>
+        <Link to="/" className="NavLogo" onClick={toggleHome}>dolla</Link>
           <div className = "MobileIcon" onClick={props.toggle}><FaBars/></div>
         <ul className="NavMenu">
           <li className="NavItem">
-            <LinkScroll to ="about" className="NavLinks">About</LinkScroll>
+            <LinkScroll 
+            to ="about" 
+            activeClass="active"
+            smooth={true} 
+            duration={500} 
+            spy={true} 
+            exact="true" 
+            offset={-80} 
+            className="NavLinks">About</LinkScroll>
           </li>
           <li className="NavItem">
-            <LinkScroll to ="discover" className="NavLinks">Discover</LinkScroll>
+            <LinkScroll 
+            to ="discover"
+            smooth={true} 
+            activeClass="active"
+            duration={500} 
+            spy={true} 
+            exact="true" 
+            offset={-80}
+            className="NavLinks">Discover</LinkScroll>
           </li>
           <li className="NavItem">
-            <LinkScroll to ="services" className="NavLinks">Services</LinkScroll>
+            <LinkScroll 
+            to ="services"
+            activeClass="active"
+            smooth={true} 
+            duration={500} 
+            spy={true} 
+            exact="true" 
+            offset={-80}
+             className="NavLinks">Services</LinkScroll>
           </li>
           <li className="NavItem">
-            <LinkScroll to ="signup" className="NavLinks">Sign Up</LinkScroll>
+            <LinkScroll 
+            to ="signup"
+            activeClass="active"
+            smooth={true} 
+            duration={500} 
+            spy={true} 
+            exact="true" 
+            offset={-80} 
+            className="NavLinks">Sign Up</LinkScroll>
           </li>    
         </ul>
         <div className="NavBtn">

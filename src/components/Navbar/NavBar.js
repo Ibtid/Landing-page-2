@@ -28,7 +28,7 @@ const Navbar = (props) => {
   return (
     <nav className={`Nav ${scrollNav?"scrollNav":""}`}>
       <div className="NavbarContainer">
-        <Link to="/" className="NavLogo" onClick={toggleHome}>dolla</Link>
+        <Link to="/" className="NavLogo" onClick={toggleHome}>BucketIn</Link>
           <div className = "MobileIcon" onClick={props.toggle}><FaBars/></div>
         <ul className="NavMenu">
           <li className="NavItem">

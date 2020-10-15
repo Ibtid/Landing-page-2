@@ -49,7 +49,7 @@ const Footer = () => {
                 </div>
                 <section className="SocialMedia">
                     <div className="SocialMediaWrap">
-                        <Link className="SocialLogo" to="/" onClick={toggleHome}>dolla</Link>
+                        <Link className="SocialLogo" to="/" onClick={toggleHome}>BucketIn</Link>
                         <small className="WebsiteRights">
                             dolla © {new Date().getFullYear()}. All rights reserved.
                         </small>
